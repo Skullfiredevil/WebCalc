@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="output">
+      <input type="text" id="result" readonly>
+    </div>
+    <table>
+            <tr>
+                <td><button onclick="clearScreen()">C</button></td>
+                <td><button onclick="backspace()"><</button></td>
+                <td><button onclick="squareRoot()">√</button></td>
+                <td><button onclick="append('%')">%</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="append('7')">7</button></td>
+                <td><button onclick="append('8')">8</button></td>
+                <td><button onclick="append('9')">9</button></td>
+                <td><button onclick="append('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="append('4')">4</button></td>
+                <td><button onclick="append('5')">5</button></td>
+                <td><button onclick="append('6')">6</button></td>
+                <td><button onclick="append('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="append('1')">1</button></td>
+                <td><button onclick="append('2')">2</button></td>
+                <td><button onclick="append('3')">3</button></td>
+                <td><button onclick="append('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="append('0')">0</button></td>
+                <td><button onclick="append('.')">.</button></td>
+                <td><button onclick="calculate()">=</button></td>
+                <td><button onclick="append('+')">+</button></td>
+            </tr>
+        </table>
+    </div>
+
+  <div class="history" id="history-section">
+    <div class="result-box" id="result-box">
+      <h3>Result:</h3>
+      <p id="current-result"></p>
+    </div>
+    <h2>History</h2>
+    <ul id="history-list"></ul>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
